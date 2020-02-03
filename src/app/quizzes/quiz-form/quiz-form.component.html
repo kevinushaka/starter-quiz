@@ -6,6 +6,14 @@
       <input class="input-custom" type="text" id="name" [formControlName]="'name'">
     </label>
     <br>
+    <label for="theme">
+      Theme <br>
+      <select class="input-custom" type="select" id="theme" [formControlName]="'theme'">
+        <option value="">--Please choose an option--</option>
+        <option *ngFor="let item of keys()">{{item}}</option>
+      </select>
+    </label>
+    <br>
     <button type="submit" class="button-card" (click)="addQuiz()">Create</button>
   </form>
 </div>

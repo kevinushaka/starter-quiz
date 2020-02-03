@@ -21,4 +21,10 @@ export class QuizListComponent implements OnInit {
   quizSelected(selected: boolean) {
     console.log('event received from child:', selected);
   }
+
+  quizDeleted(quiz: Quiz) {
+    console.log('quiz deleted:', quiz);
+    this.quizList.splice( this.quizList.indexOf(quiz), 1 );
+  }
+
 }
